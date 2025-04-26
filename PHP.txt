@@ -1,0 +1,119 @@
+PHP
+
+abs() valor absoluto
+pow() potencia
+sqrt() raiz
+round() arredonda
+intval() valor inteiro da variável
+number_format() formatação
+
+ printf=>como em C
+========================
+$p = "Leite";
+$pr = 4.5;
+printf("O %s custa R$ %.2f",$p,$pr);
+---------------------
+%d valor decimal(positivo ou negativo)
+%u valor decimal sem sinal(apenas positivo)
+%f valor real
+%s string
+=========================
+
+
+print_r=>mostrar vetores=>podendo ser substituído por var_dump($v); var_export($x);
+$v = array (3,7,6,2,1,9);
+print_r($v)
+Array([0]=>3[1]=>7[2]=>6[3]=>2[4]=>1[5]=>9)
+
+========================
+wordwrap
+$txt = "Este é um exemplo de string gigante...";
+$res = wordwrap($txt,20, "<br>\n", false);
+==========================
+
+strlen();=>tamanho da string "";
+trim();elimina os espaços.ex:trim($nom);
+ltrim() e rtrim()
+============================
+str_word_count($frase,0); conta as palavras de $frase
+0=>conta as palavras. 1=>gera um vetor 2=>gera um vetor indicando a posição dos elementos.
+================================
+explode
+transforma a frase meu um vertor,
+ex: $site = "Walter Coimbra";
+    $vetor = explode("     ",$site);
+==================================
+str_split=>transforma em vetor uma palavra.
+ex:	$nome = "Walter";
+	$vetor=str_split($nome);
+===================================
+implode=>junta os elementos de um vetor. Pode substituir com join()
+ex:	$v[0] = "curso"
+	$v[1] = "em";
+	$v[2] = "vídeo";
+	$texto = implode("#",$v);
+=================================
+chr()=> mostra a letra do código.
+ex: $letra = chr(67);
+echo "A letra de código 67 é $letra";
+===================================
+ord()=>mostra o código da letra;
+ex:	$letra = "C";
+	$cod = ord($letra);
+	print("A etra $letra tem código $cod");
+
+======================================
+strtolower($nome) => para minúsculo o nome.
+strtoupper($nome) => para maiúsculo o nome.
+ucfirst($nome)=> primeira letra maiúscula uppercase first.
+ucwords($nome)=> primeira letra da palavra em miusculo.
+strrev($nome)=> frase de trás para frente.
+strpos($frase,"PHP"); mostra a posição da palavra PHP na frase.
+stripos($frase,"php"; mostra a posição ingnorando se é maiúsculo ou minúsculo.
+substr_count($frase,"PHP")=> Quantas vezes aparece a palavra "PHP" na frase.
+substr()=>ex:$site = "Curso em vídeo";
+	$sub = substr($site,0,5);
+	echo "$sub ";
+escreve do 0 ao 5. no caso "Curso". só um número, mostra a frase a partir dele.
+se o número for negativo, mostra a frase do fim para o começo.
+==========================================
+str_pad();
+ex: $nome = "Walter";
+	$novo = str_pad($nome, 30," ", STR_PAD_RIGHT);STR_PAD_CENTER, STR_PAD_LEFT
+	print("Meu professor $novo é lindo!");
+
+	Meu professor Walter                é lindo!
+====================================
+str_repeat("-",20); gera "-" 20 vezes
+======================================
+str_replace(); para ignora o caixa str_ireplace()
+ex: 
+	$frase = "Gosto de estudar matemática";
+	$novafrase = str_replace("matemátice","PHP",$frase);
+	print($novafrase)
+==============================================
+		VETORES E MATRIZES
+=============================================
+$n = array(3,5,8,2); 
+ou
+$n = [3,5,8,2];
+$c = range(5,20,5) vetor de 5 a 20 com intervalo de 5.
+foreach($c as $valor){
+	echo $valor;
+}
+unset($n[3]); apaga o índice 3.
+
+========================================
+vetor associativo
+=========================================
+
+$cadastro = array("nome"=>"ana","idade"=>23,"peso"=>78.5);
+$cadastro["fuma"] = true;
+
+foreach($cadastro as $campo=>$valor){
+	echo "O valor de $campo é $valor";
+}
+==============================================
+Matrizes são vetores dentro de um vetor
+===============================================
+
