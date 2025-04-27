@@ -116,4 +116,20 @@ foreach($cadastro as $campo=>$valor){
 ==============================================
 Matrizes são vetores dentro de um vetor
 ===============================================
+Funções para vetores
+----------------------------------------------
+print_r($n);mostra o vetor.
+count($v); tamanho do vetor.
+array_push($n, 7); para adicionar um elemento na array ou vetor.
+array_pop($n);elimina o ultimo elemento do vetor.
+array_unshift($n,10); adiciona elemento no início do vetor ou array.
+array_shift($n); elimina o primeiro elemento do votor.
+sort($v); ordena crescente o vetor.
+rsort($v); ordena decrescente o vetor reverso.
+asort($v); ordena os elementos crescente junto com os índices.
+arsort($v); ordena os elementos desc junto com os índices.
+ksort($v); ordena os índices.
+krsort($v); ordena por chaves(key) na ordem reversa
+
+
 
