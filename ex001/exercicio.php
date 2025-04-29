@@ -8,13 +8,11 @@
 <body>
 <div>
     <?php
-        $valor = $_GET["v"];
-		
-		$raiz = sqrt($valor);
-		echo "<br>A raiz quadrada de $valor é ".number_format($raiz,2);
+        $nome = isset($_GET['nome'])? $_GET['nome']:"nome não informado";
+		echo "Tudo bem, $nome ? É um grande prazer te conhecer.";
     ?>
 	<br>
-	<a href="02-index.html">Voltar</a>
+	<a href="javascript:history.go(-1)">Voltar</a>
 </div>
 </body>
 </html>
